@@ -1,7 +1,7 @@
 let cloudx = 100;
-let cloudy = 100;  
+let cloudy = 100;
 let a=100
-let c = document.getElementById("bgColor")
+let cN = document.getElementById("bgColor")
 
 var grass = [];
 var across;
@@ -9,26 +9,27 @@ var up;
 var wind=0;
 var blow=true;
 
-  function setup() { 
+function setup() {
   let canvas = createCanvas(600, 600);
   canvas.parent ("canvasContainer")
-  
-  rectMode(CENTER);  
+
+  rectMode(CENTER);
   across=600;
   up=570;
   for(var i=0; i<50; i++) {
-  grass[i]=random(-5,5);
+    grass[i]=random(-5,5);
   }
 }
 
-  function draw() { 
+function draw() {
+  let c = cN.value;
   let x = width*0.68;
   let y = height/2;
   background(c,206,250);
-  
+
   // draw robot and waving
   drawRobot()
-  var armAngle = map(sin(frameCount * 0.05), -1, 1, radians(-40), radians(0)) 
+  var armAngle = map(sin(frameCount * 0.05), -1, 1, radians(-40), radians(0))
   drawWaving(x, y, 100, armAngle)
 
   // draw cloud
@@ -36,11 +37,11 @@ var blow=true;
   drawCloud(cloudx+150, cloudy+5)
   drawCloud(cloudx+300,cloudy-50)
   cloudx+=0.2
-  
+
   // draw moving grass
   move()
   field()
-    
+
 }
 
 function drawRobot(){

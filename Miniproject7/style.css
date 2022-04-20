@@ -1,13 +1,13 @@
 html, body {
   margin: 0;
-  padding: 0; 
+  padding: 0;
   height: 100%
 }
 
-#canvasContainer { 
+#canvasContainer {
   position: absolute;
-  top: 75%;
-  left: 80%;
+  top: 80%;
+  left: 85%;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 80%;
@@ -18,25 +18,24 @@ body {
 }
 
 .header {
-  background-color: rgb(222, 220, 188); 
+  background-color: rgb(222, 220, 188);
   color:rgba(67, 156, 135, 0.746);
   font-size: 40px;
   font-weight: bold;
   text-align: center;
-  padding: 15px
-  text-decoration: underline
+  padding: 15px;
+  border-style: dashed;
+  text-decoration: underline;
 }
 
 #bgColor {
   position: absolute;
-  left: 50%
-  top: 10%
-
+  left: 68%;
+  top: 23%;
 }
 
 .bgImage {
   background-image: url("background.jpeg");
-
   /* Add the blur effect */
   filter: blur(6px);
   -webkit-filter: blur(6px);
@@ -49,6 +48,3 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-
-  
