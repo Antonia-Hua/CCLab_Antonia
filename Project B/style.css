@@ -1,17 +1,52 @@
 
+.whole-wrapper{
+  display: flex;
+  flex-direction: column;
+  background-color: #212032
 
-.header{
+}
+.main-wrapper{
+  display:flex;
+  background-color: #fe3856
+
+}
+
+.content-wrapper{
+display: flex;
+flex-direction: column;
+background-color: #3498DB;
+
+}
+
+.header-wrapper{
   margin: auto
 }
-.container{
-  margin: auto
-  display: flex
-  flex-wrap: wrap
-  background-color: rgb(137,207,240) 
+
+.button-wrapper{
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(137,207,240)
 }
 
-.item{
-  flex-grow:1 
+.canvas-section-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  position: sticky;
+  top: 110px;
+}
+.canvas-container{
+  width: 100%;
+  /* height: 300px; */
+  background-color: rgb(240, 148, 168);
+}
+
+.canvas-container canvas{
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
 }
 
 .dropbtn {
@@ -58,22 +93,3 @@
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-.canvas-section-wrapper{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  position: sticky;
-  top: 110px;
-}
-.canvas-container{
-  width: 100%;
-  /* height: 300px; */
-  background-color: rgb(240, 148, 168);
-}
-
-.canvas-container canvas{
-  width: 100% !important;
-  height: 100% !important;
-  display: block;
-}
