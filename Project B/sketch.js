@@ -20,7 +20,8 @@ window.onclick = function(event) {
 }
   
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  let axe=createCanvas(windowWidth, windowHeight);
+  axe.parent(canvasContainer)
   a = new Axe();
 }
 
