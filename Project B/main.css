@@ -15,14 +15,34 @@ html, body {
 
 .p5-wrapper{
   display: flex;
-  top:110px;
+  top:90px;
 }
 
 .dropdown{
+  display: flex;
+  flex-direction: row;
   position: fixed;
   right: 0px;
   top: 0px;
 }
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.dropbtn{
+  background-color: #4ca0af;
+  color: white;
+  padding: 50px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
 
 .dropdown-wrapper{
   display: none;
@@ -41,24 +61,6 @@ html, body {
   font-size: 20px;
   text-decoration: none;
   display: block;
-}
-
-.dropbtn{
-  background-color: #4ca0af;
-  color: white;
-  padding: 50px;
-  font-size: 30px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
 }
 
 
