@@ -1,3 +1,7 @@
+html, body {
+  margin: 0;
+}
+
 .whole-wrapper{
   display: flex;
   flex-direction: column;
@@ -14,35 +18,10 @@
   top:110px;
 }
 
-.content-wrapper{
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  width: 100px;
-  height: 50px;
-  background-color: lightyellow;
-}
-
-.header-wrapper{
-  margin: auto
-}
-
-.dropbtn{
-  background-color: #4ca0af;
-  color: white;
-  padding: 50px;
-  font-size: 30px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
 .dropdown{
-  position: relative;
-  display:inline-block;
+  position: fixed;
+  right: 0px;
+  top: 0px;
 }
 
 .dropdown-wrapper{
@@ -64,6 +43,19 @@
   display: block;
 }
 
+.dropbtn{
+  background-color: #4ca0af;
+  color: white;
+  padding: 50px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
@@ -74,7 +66,4 @@
 .dropdown-wrapper a:hover{background-color: #eb6daa}
 
 .show{display: block}
-
-
-
 

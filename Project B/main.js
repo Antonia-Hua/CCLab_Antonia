@@ -1,74 +1,123 @@
 let a;
 let k = 1;
+let selected = "";
 
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-wrapper");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
+    let dropdowns = document.getElementsByClassName("dropdown-wrapper");
+    for (let i = 0; i < dropdowns.length; i++) {
+      let openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
       }
     }
   }
 }
-  
+
+function selectCountry( name ) {
+  selected = name;
+}
+
 function setup() {
-  let axe=createCanvas(windowWidth, windowHeight);
+  let axe = createCanvas(windowWidth, windowHeight);
   axe.parent("canvasContainer")
   a = new Axe();
 }
 
 function draw() {
-  background(255);
-  //console.log(mouseX, mouseY);
+  background(255, 0, 255);
+  if (selected == "Argentina") {
+    displayArgentina();
+  }
+  if (selected == "China") {
+    displayChina();
+  }
+  if (selected == "Finland") {
+    displayFinland();
+  }
+  if (selected == "Germany") {
+    displayGermany();
+  }
+  if (selected == "Japan") {
+    displayJapan();
+  }
+  if (selected == "Kenya") {
+    displayKenya();
+  }
+  if (selected == "Saudi Arabia") {
+    displaySaudiArabia();
+  }
+  if (selected == "United States of America") {
+    displayUnitedStatesofAmerica();
+  }
+  if (selected == "The United Kingdom") {
+    displayTheUnitedKingdom();
+  }
+
   a.draw();
   a.update();
-  
+
   strokeWeight(2);
   fill(0);
   textFont("Courier");
   textSize(80);
   text("AXE", 150, 240);
-  text("THE TAX", 150,460)
-  
+  text("THE TAX", 150, 460)
 }
 
-/*function bloodDrop() {
-  this.x = 30;
-  this.y = 30;
-
-  this.show = function () {
-    fill(255, 255, 0);
-  }; 
+function displayChina() {
+  background(255, 0, 0);
 }
-*/
+function displayArgentina() {
+  background(255, 255, 0);
+  // you can do much more here!
+}
+function displayFinland() {
+  background(255, 0, 0);
+}
+function displayGermany() {
+  background(255, 0, 0);
+}
+function displayJapan() {
+  background(255, 0, 0);
+}
+function displayKenya() {
+  background(255, 0, 0);
+}
+function displaySaudiArabia() {
+  background(255, 0, 0);
+}
+function displayUnitedStatesofAmerica() {
+  background(255, 0, 0);
+}
+function displayTheUnitedKingdom() {
+  background(255, 0, 0);
+}
 
 class Axe {
-constructor() {
+  constructor() {
     this.k = 1;
     this.angle = 0;
   }
-  
+
   update() {
     push();
-    this.angle = map(sin(frameCount * 0.1), -1,1, -0.15, 0.5);
+    this.angle = map(sin(frameCount * 0.1), -1, 1, -0.15, 0.5);
     pop();
   }
 
   draw() {
     push();
-    translate(209,387)
+    translate(209, 387)
     rotate(this.angle);
     noStroke();
     fill("#88503A");
-  
+
     quad(
       -11 * this.k,
       -11 * this.k,
@@ -119,3 +168,4 @@ constructor() {
     pop();
   }
 }
+
