@@ -8,7 +8,7 @@ function myFunction() {
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var dropdowns = document.getElementsByClassName("dropdown-wrapper");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
@@ -21,7 +21,7 @@ window.onclick = function(event) {
   
 function setup() {
   let axe=createCanvas(windowWidth, windowHeight);
-  axe.parent(canvasContainer)
+  axe.parent("canvasContainer")
   a = new Axe();
 }
 
@@ -40,14 +40,15 @@ function draw() {
   
 }
 
-function bloodDrop() {
+/*function bloodDrop() {
   this.x = 30;
   this.y = 30;
 
   this.show = function () {
     fill(255, 255, 0);
-  };
+  }; 
 }
+*/
 
 class Axe {
 constructor() {
