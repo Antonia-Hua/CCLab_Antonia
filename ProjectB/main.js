@@ -1,11 +1,8 @@
-//a function that calls the text
 
 let a;
-let k = 1;
+let k = 0.8;
 let img;
-
-// let posx=[710,1809,1223,1159,1672,1397,1447,372,1099];
-// let posy=[570,296,188,245,374,404,341,290,216];
+let selected = "";
 
 let Circle1;
 let Circle2;
@@ -17,28 +14,34 @@ let Circle7;
 let Circle8;
 let Circle9;
 
+
+function selectCountry(name){
+  selected=name;
+}
+
 function setup() {
-  let canvas = createCanvas(1400, 800);
+  let canvas = createCanvas(1500, 800);
   canvas.parent('p5-container');
   img = loadImage('assets/world-map.png');
   a = new Axe();
 
-  Circle1=new Circle(710,570,10);
-  Circle2=new Circle(1809,296,10);
-  Circle3=new Circle(1223,188,10);
-  Circle4=new Circle(1159,245,10);
-  Circle5=new Circle(1672,374,10);
-  Circle6=new Circle(1397,404,10);
-  Circle7=new Circle(1447,341,10);
-  Circle8=new Circle(372,290,10);
-  Circle9=new Circle(1099,216,10);
+  Circle1=new Circle(480,445,6);
+  Circle2=new Circle(860,260,6);
+  Circle3=new Circle(650,180,6);
+  Circle4=new Circle(628,225,6);
+  Circle5=new Circle(795,318,6);
+  Circle6=new Circle(705,330,6);
+  Circle7=new Circle(725,292,6);
+  Circle8=new Circle(380,260,6);
+  Circle9=new Circle(605,205,6);
 
 }
 
+
 function draw() {
   background("#89CFF0");
-  image(img, 420, 80);
-  img.resize(1000,0)
+  image(img, 250, 60);
+  img.resize(800,0)
 
   a.draw();
   a.update();
@@ -46,12 +49,73 @@ function draw() {
   strokeWeight(2);
   fill(0);
   textFont("Courier");
-  textSize(80);
-  text("AXE", 80, 280);
-  text("THE TAX", 80, 520);
+  textSize(50);
+  text("AXE", 40,200);
+  text("THE TAX", 40, 400);
   
+  //Argentina
   Circle1.checkMouse();
   Circle1.display();
+  if (selected=="Argentina"){
+    displayArgentina();
+  }
+
+  //China
+  Circle2.checkMouse();
+  Circle2.display();
+  if (selected=="China"){
+    displayChina();
+  }
+
+  //Finland
+  Circle3.checkMouse();
+  Circle3.display();
+  if (selected=="Finland"){
+    displayFinland();
+  }
+
+  //Germany
+  Circle4.checkMouse();
+  Circle4.display();
+  if (selected=="Germany"){
+    displayGermany();
+  }
+
+  //India
+  Circle5.checkMouse();
+  Circle5.display();
+  if (selected=="India"){
+    displayIndia();
+  }
+
+  //Kenya
+  Circle6.checkMouse();
+  Circle6.display();
+  if (selected=="Kenya"){
+    displayKenya();
+  }
+
+  //Saudi Arabia
+  Circle7.checkMouse();
+  Circle7.display();
+  if (selected=="Saudi Arabia"){
+    displaySA();
+  }
+
+  //USA
+  Circle8.checkMouse();
+  Circle8.display();
+  if (selected=="United States of America"){
+    displayUSA();
+  }
+
+  //UK
+  Circle9.checkMouse();
+  Circle9.display();
+  if (selected=="The United Kingdom"){
+    displayUK();
+  }
+
 }
 
 class Circle{
@@ -69,12 +133,10 @@ class Circle{
     if (distance < this.rad) {
       // mouse is in the area
       this.r = 255;
-      this.g = 255;
+      this.g = 0;
       this.b = 0;
       if (mouseIsPressed) {
-        this.r = 255;
-        this.g = 0;
-        this.b = 0;
+        //
       }
     }
     else{
@@ -88,14 +150,14 @@ class Circle{
     push();
     noStroke();
     fill(this.r,this.g,this.b);
-    ellipse(this.x,this.y,10);
+    ellipse(this.x,this.y,8);
     pop()
   }
 }
 
 class Axe {
   constructor() {
-    this.k = 1;
+    this.k = 0.8;
     this.angle = 0;
   }
   update() {
@@ -103,7 +165,7 @@ class Axe {
   }
   draw() {
     push();
-    translate(120, 450)
+    translate(50, 350)
     rotate(this.angle);
     noStroke();
     fill("#88503A");
@@ -154,9 +216,23 @@ class Axe {
       161 * this.k,
       -59 * this.k
     );
-
     pop();
   }
+}
+
+class Text{
+  constructor(){
+    this.x=x;
+    this.y=y;
+  }
+  display(){
+    push();
+    fill(255,255,255);
+    textSize(20);
+    text("this.text",330,560,700,400);
+    pop()
+  }
+
 }
 
 function openDropdown() {
@@ -176,7 +252,56 @@ window.onclick = function (event) {
   }
 }
 
-function displayText(){
+function displayArgentina(){
+  fill(255,255,255);
+  textSize(20);
+  text("Argentina applies a range of different Value Added Tax rates. Feminine hygiene products are being taxed at the standard 21% rate. Among Women's Day marches and strikes that were called in various parts of the country, advocates demanded the reduction of period taxes.",330,560,700,400);
+}
 
-  
+function displayChina(){
+  fill(255,255,255);
+  textSize(20);
+  text("As of 2020, the Chinese government regulates a 13% sales tax on feminine sanitary products. That is 4% higher than the 9% tax for essential daily necessities such as grain and water. Many women and young girls, especially in rural areas, cannot afford feminine hygiene products.",330,560,700,400);
+}
+
+function displayFinland(){
+  fill(255,255,255);
+  textSize(20);
+  text("Finland applies one of the highest Value Added Tax rates in Europe. While some pharmaceuticals have a reduced rate applied to health products, products used for sanitary protection and contraception other than medicinal products are taxed at the standard rate of 24%.",330,560,700,400);
+}
+
+function displayGermany(){
+  fill(255,255,255);
+  textSize(20);
+  text("A tax reduction of 7% instead of 19% for products for the purposes of monthly sanitary hygiene came into effect in 2020. Under the COVID-19 measures to lower VAT, the products will be taxed at 5% instead of 7% from 1 July 2020 to 31 December 2020). Under EU Law, Germany can only apply the minimum tax rate of 5%.",330,560,700,400);
+}
+
+function displayIndia(){
+  fill(255,255,255);
+  textSize(20);
+  text("Menstrual hygiene items are taxed at 12% under India’s Goods & Services Tax (GST) which was launched in July 2017.",330,560,700,400);
+}
+
+function displayKenya(){
+  fill(255,255,255);
+  textSize(20);
+  text("Kenya was the first nation in the world to end the period tax in 2004. However, research shows that 65% of Kenyan women and girls are unable to afford basic sanitary pads. As a consequence, girls often rely on the men in their lives for period products and some girls engage in transactional sex in order to secure sanitary products, perpetuating a patriarchal cycle of reliance and exploitation.",330,560,700,400);
+}
+
+function displaySA(){
+  fill(255,255,255);
+  textSize(20);
+  text("Saudi Arabia has a standard Value Added Tax of 15%, increasing from 5% in July 2020. Examples of zero-rated goods and services include medicines and medical goods, considered as qualifying medicines and qualifying medical goods as per the classification issued by the ministry of health or any other competent authority from time to time.",330,560,700,400);
+}
+
+function displayUSA(){
+  fill(255,255,255);
+  textSize(20);
+  text("There are active campaigns ongoing for various states. As of now, 23 states have exempted tax on menstrual products, while 27 states continue to tax feminine hygiene products.",330,560,700,400);
+}
+
+function displayUK(){
+  fill(255,255,255);
+  textSize(20);
+  text("With the UK exiting from the European Union taking effect on 31 December 2020, the tax on menstrual products is now 0%. This was already announced by the government in the 2020 Budget that a zero rate will apply from 1 January 2021.",330,560,700,400);
 }
