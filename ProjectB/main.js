@@ -23,7 +23,16 @@ function setup() {
   img = loadImage('assets/world-map.png');
   a = new Axe();
 
-  Circle1=new Circle(710,570,10)
+  Circle1=new Circle(710,570,10);
+  Circle2=new Circle(1809,296,10);
+  Circle3=new Circle(1223,188,10);
+  Circle4=new Circle(1159,245,10);
+  Circle5=new Circle(1672,374,10);
+  Circle6=new Circle(1397,404,10);
+  Circle7=new Circle(1447,341,10);
+  Circle8=new Circle(372,290,10);
+  Circle9=new Circle(1099,216,10);
+
 }
 
 function draw() {
@@ -50,9 +59,9 @@ class Circle{
   this.x=x;
   this.y=y;
   this.rad=rad;
-  // this.r=255;
-  // this.g=255;
-  // this.b=255
+  this.r=255;
+  this.g=255;
+  this.b=255
   }
 
   checkMouse(){

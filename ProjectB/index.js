@@ -3,9 +3,9 @@ let data = "End the Stigma.Period."
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("canvasContainer")
-    textSize(150)
+    textSize(50)
     textFont('Courier New');
-    typeWriter(data, 0, 50, 200, 180);
+    typeWriter(data, 0, 50, 50, 180);
 }
 
 function draw() {
