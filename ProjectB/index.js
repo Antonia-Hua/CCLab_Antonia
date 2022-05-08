@@ -1,8 +1,9 @@
-let data = "End the Stigma. Period."
+let data = "End the Stigma.Period."
 
 function setup() {
-  createCanvas(windowWidth,windowHeight);
-    textSize(50)
+  let canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent("canvasContainer")
+    textSize(150)
     textFont('Courier New');
     typeWriter(data, 0, 50, 200, 180);
 }

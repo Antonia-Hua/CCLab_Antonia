@@ -1,0 +1,59 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+}
+
+.wrapper { 
+  display: flex;
+  flex-direction: row;
+}
+
+#canvasContainer {
+  display: flex;
+  position: absolute;
+  left: 25%;
+  top: 5%;
+  margin: auto
+}
+
+.introduction {
+  color: white;
+  font-size: 50px;
+  width: 38%;
+  height: 28%;
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-bottom: 30px;
+  padding-right: 50px;
+  
+  position: relative;
+  top: 1450px; 
+  left: 1250px;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 10px 10px 5px lightblue;
+}
+
+.poster{
+  position: absolute;
+  left: 28%;
+  top: 18%;
+}
+
+a.button {
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  left: 35%;
+  top:170%;
+  border: 0;
+  line-height: 2.5;
+  padding: 20px 150px;
+  font-size: 80px;
+  background-color: rgb(242,172,185);
+}
+
+a.button:hover {
+  background-color: "#89CFF0";
+}

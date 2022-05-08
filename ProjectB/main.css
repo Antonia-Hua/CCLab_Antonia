@@ -1,0 +1,78 @@
+html,
+body {
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+}
+
+#p5-container {
+  width: 1400px;
+  height: 800px;
+  position: absolute;
+  left: 12%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  transform: scale(1.8)
+}
+.whole-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgreen;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  right: 20%;
+  top: 17%;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+  background-color: "#89CFF0";
+}
+
+.dropbtn {
+  background-color: rgb(242,172,185);
+  color: white;
+  padding: 40px;
+  font-size: 60px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #89CFF0;
+}
+
+.dropdown-wrapper {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-wrapper a {
+  color: black;
+  padding: 12px 16px;
+  font-size: 40px;
+  text-decoration: none;
+  display: block;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.dropdown-wrapper a:hover {
+  background-color: rgb(242,172,185)
+}
+
+.show {
+  display: block
+}
