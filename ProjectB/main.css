@@ -76,3 +76,8 @@ body {
   display: block
 }
 
+.icon{
+  position: absolute;
+  left:96%;
+  top: 2%
+}

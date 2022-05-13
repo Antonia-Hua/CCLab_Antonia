@@ -2,6 +2,7 @@
 let a;
 let k = 0.8;
 let img;
+
 let selected = "";
 
 let Circle1;
