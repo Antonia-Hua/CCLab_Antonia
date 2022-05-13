@@ -76,8 +76,30 @@ body {
   display: block
 }
 
-.icon{
+.icon1{
   position: absolute;
-  left:96%;
+  left:92%;
   top: 2%
+}
+
+.icon2{
+  position: absolute;
+  left: 96%;
+  top: 2%
+}
+
+.paragraph{
+  position: absolute;
+  left: 25%;
+  top: 30%;
+  font-size: 25px;
+}
+
+.References{
+  position: absolute;
+  text-align: center;
+  left: 20%;
+  top: 20%;
+  font-size: 35px;
+  color: rgb(242,172,185);
 }
